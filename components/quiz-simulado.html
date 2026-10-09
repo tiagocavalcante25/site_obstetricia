@@ -1,0 +1,47 @@
+<!-- ==================== SIMULADO USMLE STEP 2 CK / STEP 3 ==================== -->
+    <section id="quiz-section" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-4 mb-6 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-widest">Simulado de Alta Performance</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3">
+            <i class="fa-solid fa-graduation-cap text-teal-500"></i> Simulado USMLE Step 2 CK & Step 3
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Vinhetas clínicas no formato NBME com justificativas completas e dicas da Ivy League.</p>
+        </div>
+        <div id="quiz-counter" class="text-xs font-black px-3 py-1.5 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/30">
+          Questão 1 de 5
+        </div>
+      </div>
+
+      <div id="quiz-container" class="max-w-4xl mx-auto space-y-6">
+        
+        <!-- Clinical Vignette Card -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <p id="quiz-question-text" class="text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-100 leading-relaxed">
+            Carregando questão clínica...
+          </p>
+        </div>
+
+        <!-- Options Container -->
+        <div id="quiz-options-container" class="space-y-3"></div>
+
+        <!-- Feedback & Rationale Box -->
+        <div id="quiz-feedback-box" class="hidden p-6 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 transition-all">
+          <div id="quiz-feedback-title" class="font-bold text-sm"></div>
+          <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" id="quiz-feedback-explanation"></div>
+          <div class="p-3 rounded-xl bg-teal-500/10 border border-teal-500/30 text-xs text-teal-800 dark:text-teal-300 font-semibold flex items-start gap-2">
+            <i class="fa-solid fa-lightbulb text-teal-500 mt-0.5"></i>
+            <div>
+              <span class="font-bold uppercase tracking-wider block text-[10px]">USMLE High-Yield Pearl:</span>
+              <span id="quiz-feedback-pearl"></span>
+            </div>
+          </div>
+          <div class="flex justify-end pt-2">
+            <button id="quiz-next-btn" onclick="nextQuizQuestion()" class="px-6 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all shadow-md shadow-teal-500/20">
+              Próxima Questão ➔
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>

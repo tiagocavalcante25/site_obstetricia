@@ -1,0 +1,77 @@
+<!-- ==================== FLASHCARDS 3D INTERATIVOS ==================== -->
+    <section id="flashcards-section" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-4 mb-6 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase tracking-widest">Treinamento de Alta Retenção</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3">
+            <i class="fa-solid fa-layer-group text-purple-500"></i> Top 20 Flashcards Interativos 3D (USMLE Style)
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Clique no cartão para girar (flip) e ver a resposta detalhada e as pérolas da Ivy League.</p>
+        </div>
+        <div id="fc-index" class="text-xs font-black px-3 py-1.5 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30">
+          Card 1 de 10
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <!-- 3D FLIP CONTAINER -->
+        <div class="perspective-1000 w-full h-80 sm:h-72 cursor-pointer select-none" onclick="flipFlashcard()">
+          <div id="flashcard-inner" class="flashcard-inner shadow-xl">
+            
+            <!-- FRONT -->
+            <div class="flashcard-front p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white to-slate-100 dark:from-slate-900 dark:to-slate-800 border-2 border-purple-500/30 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span id="fc-category" class="px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider">
+                    Categoria
+                  </span>
+                  <span class="text-xs text-slate-400 flex items-center gap-1">
+                    <i class="fa-solid fa-repeat"></i> Clique para virar
+                  </span>
+                </div>
+                <h3 id="fc-question" class="text-base sm:text-lg font-bold text-slate-800 dark:text-white mt-6 leading-relaxed">
+                  Carregando pergunta...
+                </h3>
+              </div>
+              <div class="text-[11px] text-slate-400 font-medium">
+                Pressione a barra de espaço ou toque para revelar o verso.
+              </div>
+            </div>
+
+            <!-- BACK -->
+            <div class="flashcard-back p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-purple-950 via-slate-900 to-slate-950 text-white border-2 border-purple-500 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider">
+                    Resposta & Fisiopatologia
+                  </span>
+                  <span class="text-xs text-purple-300 flex items-center gap-1">
+                    <i class="fa-solid fa-repeat"></i> Clique para voltar
+                  </span>
+                </div>
+                <p id="fc-answer" class="text-xs sm:text-sm text-slate-200 mt-4 leading-relaxed font-normal">
+                  Carregando resposta...
+                </p>
+              </div>
+              <div id="fc-tip" class="p-3 rounded-xl bg-purple-900/40 border border-purple-500/30 text-[11px] text-purple-200 font-semibold">
+                Dica USMLE...
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button onclick="prevFlashcard()" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-purple-500 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all shadow-sm">
+            <i class="fa-solid fa-chevron-left mr-1"></i> Anterior
+          </button>
+          <button onclick="flipFlashcard()" class="px-6 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition-all shadow-md shadow-purple-500/20">
+            <i class="fa-solid fa-arrows-rotate mr-1"></i> Virar Cartão
+          </button>
+          <button onclick="nextFlashcard()" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-purple-500 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all shadow-sm">
+            Próximo <i class="fa-solid fa-chevron-right ml-1"></i>
+          </button>
+        </div>
+      </div>
+    </section>

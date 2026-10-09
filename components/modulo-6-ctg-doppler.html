@@ -1,0 +1,151 @@
+<!-- ==================== MÓDULO 6: BEM-ESTAR FETAL, CTG & DOPPLER ==================== -->
+    <section id="modulo-6" class="glass-panel p-6 sm:p-8 rounded-3xl glow-card">
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-widest">Módulo 06</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Crescimento Fetal, Cardiotocografia (CTG) & Doppler</h2>
+        </div>
+        <button onclick="toggleAudioNarration('modulo-6-content')" class="audio-narrate-btn text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-teal-500 flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-volume-high text-teal-500"></i> Ouvir Seção
+        </button>
+      </div>
+
+      <div id="modulo-6-content" class="space-y-8">
+        
+        <!-- CIUR SIMÉTRICO VS ASSIMÉTRICO -->
+        <div id="modulo-6-ciur" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-2 flex items-center gap-2">
+              <span class="w-6 h-6 rounded bg-purple-500/10 text-purple-600 flex items-center justify-center text-xs font-black">I</span>
+              CIUR Tipo I (Simétrico / Intrínseco)
+            </h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-2">
+              Início precoce (1º trimestre). Acometimento harmônico de cabeça, abdome e ossos longos (relação CC/CA preservada). 
+            </p>
+            <div class="text-[11px] p-2.5 rounded-xl bg-purple-50 dark:bg-purple-950/30 text-purple-800 dark:text-purple-300">
+              <strong>Etiologias:</strong> Aneuploidias (Trissomias 18 e 13), infecções congênitas precoces (TORCH, CMV, Rubéola), drogas e tabagismo pesado. Prognóstico neurológico mais reservado.
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-2 flex items-center gap-2">
+              <span class="w-6 h-6 rounded bg-teal-500/10 text-teal-600 flex items-center justify-center text-xs font-black">II</span>
+              CIUR Tipo II (Assimétrico / Extrínseco)
+            </h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-2">
+              Início tardio (3º trimestre). Feto com cabeça preservada e abdome emagrecido (relação CC/CA aumentada).
+            </p>
+            <div class="text-[11px] p-2.5 rounded-xl bg-teal-50 dark:bg-teal-950/30 text-teal-800 dark:text-teal-300">
+              <strong>Etiologias:</strong> Insuficiência uteroplacentária (Pré-Eclâmpsia, HAS crônica, trombofilias). Fisiopatologia de 'Brain Sparing' (redistribuição do fluxo sanguíneo para cérebro, coração e suprarrenais).
+            </div>
+          </div>
+        </div>
+
+        <!-- ULTRA-REALISTIC IMAGE: CTG DECELERATIONS -->
+        <div id="modulo-6-ctg" class="p-5 rounded-3xl bg-slate-900 text-white shadow-xl overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <span class="text-[10px] font-black uppercase tracking-widest text-teal-400">Figura Médica 05 • Monitorização Fetal</span>
+              <h3 class="text-lg font-bold">Interpretação da Cardiotocografia: Os 3 Padrões de Desaceleração Fetal</h3>
+            </div>
+            <button onclick="openLightbox('assets/img/ctg_decelerations.jpg', 'Cardiotocografia e Desacelerações', 'Painel comparativo dos traçados de Cardiotocografia (CTG): 1) Desaceleração Precoce (DIP I) - espelho da contração por compressão cefálica, benigna; 2) Desaceleração Tardia (DIP II) - início após o ápice por insuficiência uteroplacentária e acidose fetal; 3) Desaceleração Variável (DIP umbilical) - formato abrupto em V ou W por compressão de cordão.')" class="px-3 py-1.5 rounded-xl bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 text-xs font-bold border border-teal-500/30 transition-all flex items-center gap-2">
+              <i class="fa-solid fa-expand"></i> Ver em Alta Resolução
+            </button>
+          </div>
+          
+          <div class="relative rounded-2xl overflow-hidden border border-slate-800 group cursor-pointer" onclick="openLightbox('assets/img/ctg_decelerations.jpg', 'Cardiotocografia e Desacelerações', 'Painel comparativo de desacelerações na CTG.')">
+            <img src="assets/img/ctg_decelerations.jpg" alt="Traçados de CTG e Desacelerações em Alta Resolução" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Mnemônico VEAL CHOP:</strong> Variable = Cord compression | Early = Head compression | Accelerations = OK | Late = Placental insufficiency.
+            </div>
+          </div>
+        </div>
+
+        <!-- ULTRA-REALISTIC IMAGE: FETAL DOPPLERVELOCIMETRY -->
+        <div id="modulo-6-doppler" class="p-5 rounded-3xl bg-slate-900 text-white shadow-xl overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <span class="text-[10px] font-black uppercase tracking-widest text-teal-400">Figura Médica 06 • Hemodinâmica Fetal</span>
+              <h3 class="text-lg font-bold">Dopplerfluxometria em CIUR: Da Resistência Placentária à Descompensação do Ducto Venoso</h3>
+            </div>
+            <button onclick="openLightbox('assets/img/doppler_fetal_iupr.jpg', 'Dopplerfluxometria em CIUR', 'Diagrama avançado de Doppler Fetal em CIUR: 1) Artéria Umbilical normal com fluxo anterógrado; 2) Ausência de fluxo diastólico final (AEDV - Diástole Zero); 3) Fluxo diastólico reverso (REDV - Diástole Reversa); 4) Artéria Cerebral Média com Brain Sparing (baixa resistência com aumento de diástole); 5) Ducto Venoso com onda A reversa indicando falência miocárdica e acidemia grave.')" class="px-3 py-1.5 rounded-xl bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 text-xs font-bold border border-teal-500/30 transition-all flex items-center gap-2">
+              <i class="fa-solid fa-expand"></i> Ver em Alta Resolução
+            </button>
+          </div>
+          
+          <div class="relative rounded-2xl overflow-hidden border border-slate-800 group cursor-pointer" onclick="openLightbox('assets/img/doppler_fetal_iupr.jpg', 'Dopplerfluxometria em CIUR', 'Diagrama avançado de Doppler Fetal em CIUR.')">
+            <img src="assets/img/doppler_fetal_iupr.jpg" alt="Doppler Fetal em CIUR em Alta Resolução" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-300">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-xs text-slate-300">
+              <strong>Sequência Crítica:</strong> Artéria Umbilical com Diástole Zero (parto com 34 sem) ➔ Diástole Reversa (parto com 30-32 sem) ➔ Ducto Venoso com Onda A Reversa (parto IMEDIATO em qualquer IG).
+            </div>
+          </div>
+        </div>
+
+        <!-- CALCULADORA INTERATIVA: PERFIL BIOFÍSICO FETAL (PBF DE MANNING) -->
+        <div id="calculadora-pbf" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">
+            <span class="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-widest">Ferramenta Clínica 02</span>
+            <h4 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-heart-pulse text-teal-500"></i> Calculadora do Perfil Biofísico Fetal (PBF de Manning)
+            </h4>
+            <p class="text-xs text-slate-500 mt-1">Pontue cada uma das 5 variáveis biofísicas avaliadas na ultrassonografia e cardiotocografia:</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            <div>
+              <label for="pbf-resp" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">1. Movimentos Respiratórios</label>
+              <select id="pbf-resp" class="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs">
+                <option value="2">Presente (≥ 1 episódio de ≥ 30s em 30 min) [2 pts]</option>
+                <option value="0">Ausente ou < 30 segundos contínuos [0 pts]</option>
+              </select>
+            </div>
+            <div>
+              <label for="pbf-mov" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">2. Movimentos Corporais Fetais</label>
+              <select id="pbf-mov" class="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs">
+                <option value="2">Normal (≥ 3 movimentos corporais em 30 min) [2 pts]</option>
+                <option value="0">Anormal (< 3 movimentos corporais) [0 pts]</option>
+              </select>
+            </div>
+            <div>
+              <label for="pbf-tonus" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">3. Tônus Fetal</label>
+              <select id="pbf-tonus" class="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs">
+                <option value="2">Normal (≥ 1 flexão/extensão ativa de membro/mão) [2 pts]</option>
+                <option value="0">Ausente ou extensão flácida sem retorno [0 pts]</option>
+              </select>
+            </div>
+            <div>
+              <label for="pbf-la" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">4. Volume de Líquido Amniótico</label>
+              <select id="pbf-la" class="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs">
+                <option value="2">Normal (≥ 1 bolsão vertical com profundidade ≥ 2 cm) [2 pts]</option>
+                <option value="0">Oligoâmnio (maior bolsão < 2 cm) [0 pts]</option>
+              </select>
+            </div>
+            <div>
+              <label for="pbf-ctg" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">5. Cardiotocografia (CTG Basal)</label>
+              <select id="pbf-ctg" class="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs">
+                <option value="2">Reativo (≥ 2 acelerações transitórias em 20 min) [2 pts]</option>
+                <option value="0">Não Reativo (< 2 acelerações em 40 min) [0 pts]</option>
+              </select>
+            </div>
+            <div class="flex items-end">
+              <button onclick="calculatePBF()" class="w-full py-2.5 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all shadow-md">
+                Calcular Escore PBF
+              </button>
+            </div>
+          </div>
+
+          <div id="pbf-results" class="hidden p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 block">Pontuação Total de Manning:</span>
+                <span id="pbf-total-score" class="text-2xl font-black text-teal-600 dark:text-teal-400">-- / 10</span>
+              </div>
+              <div id="pbf-status-badge"></div>
+            </div>
+            <div id="pbf-conduta" class="text-xs text-slate-700 dark:text-slate-200"></div>
+            <p id="pbf-detail-text" class="text-[11px] text-slate-500 italic"></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
