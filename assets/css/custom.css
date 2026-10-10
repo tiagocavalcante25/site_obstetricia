@@ -273,6 +273,11 @@ h1, h2, h3, h4, h5, h6, .font-display {
   border: 1px solid #475569;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   transition: all 0.15s ease;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pump-btn:hover {
@@ -348,16 +353,16 @@ a, button, input, select, textarea, [role="button"], .cursor-pointer {
 
 /* 4. Minimum Touch Target Sizing (WCAG 2.5.5) & Handheld Readability */
 @media (max-width: 640px) {
-  button, 
+  /* Botões principais com altura tátil confortável, sem forçar botões compactos */
   .btn,
-  .protocol-tab,
-  .pw-btn,
-  .pump-btn {
-    min-height: 42px;
+  button:not(.pump-btn):not(.font-size-btn):not([onclick*="Rate"]):not([onclick*="adjust"]) {
+    min-height: 38px;
   }
 
-  /* Make checkbox labels easier to tap on phones */
-  label {
+  /* Checkbox e radios táteis sem quebrar tags de título <label> */
+  label:has(input[type="checkbox"]),
+  label:has(input[type="radio"]),
+  label.checkbox-label {
     min-height: 38px;
     display: flex;
     align-items: center;
@@ -366,20 +371,19 @@ a, button, input, select, textarea, [role="button"], .cursor-pointer {
   /* Readability floor: prevent microscopic text on mobile OLED/Retina screens */
   .text-\[9px\],
   .text-\[10px\] {
-    font-size: 0.72rem !important; /* ~11.5px */
-    line-height: 1.15rem !important;
+    font-size: 0.75rem !important; /* ~12px */
+    line-height: 1.25rem !important;
   }
 
   .text-\[11px\] {
-    font-size: 0.8rem !important; /* ~12.8px */
-    line-height: 1.3rem !important;
+    font-size: 0.82rem !important; /* ~13.2px */
+    line-height: 1.35rem !important;
   }
 
-  /* Ensure long medical compound words don't overflow */
-  h1, h2, h3, h4, h5, .font-bold {
+  /* Quebra suave apenas para títulos médicos em caixas estreitas - NUNCA em botões ou classes utilitárias */
+  h1, h2, h3, h4, h5 {
     overflow-wrap: break-word;
     word-break: break-word;
-    hyphens: auto;
   }
 
   /* Compact glass panels padding for mobile */
@@ -387,6 +391,30 @@ a, button, input, select, textarea, [role="button"], .cursor-pointer {
     padding: 1.15rem !important;
     border-radius: 1.25rem !important;
   }
+}
+
+/* ==========================================================================
+   BLINDAGEM RESPONSIVA: PREVENÇÃO DE BOTÕES VERTICAIS E LETRAS EMPILHADAS
+   ========================================================================== */
+button, 
+[role="button"], 
+.btn, 
+.protocol-tab, 
+.pw-btn, 
+.pump-btn {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+}
+
+.pump-btn,
+.font-size-btn,
+.badge,
+.pill-badge {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  flex-shrink: 0;
 }
 
 /* 5. Fluid Responsive Tables with Momentum Touch Scroll */

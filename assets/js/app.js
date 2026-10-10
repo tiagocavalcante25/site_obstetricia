@@ -431,9 +431,9 @@ function selectPriscillaWhite(key) {
     const btn = document.getElementById(`pw-btn-${k}`);
     if (btn) {
       if (k === key) {
-        btn.className = 'pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-teal-600 text-white border-teal-600 shadow-md cursor-pointer';
+        btn.className = 'pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-teal-600 text-white border-teal-600 shadow-md cursor-pointer flex flex-col items-center justify-center text-center';
       } else {
-        btn.className = 'pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer';
+        btn.className = 'pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center';
       }
     }
   });
@@ -892,9 +892,9 @@ function updateMgAllViews() {
     const tab = document.getElementById(`mg-tab-${key}`);
     if (tab) {
       if (key === currentMgState.protocolKey) {
-        tab.className = 'protocol-tab p-3 rounded-xl border text-left transition-all cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-800 dark:text-teal-200 shadow-sm';
+        tab.className = 'protocol-tab p-2.5 sm:p-3 rounded-xl border text-left transition-all cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-800 dark:text-teal-200 shadow-sm flex flex-col justify-between min-h-[72px]';
       } else {
-        tab.className = 'protocol-tab p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300';
+        tab.className = 'protocol-tab p-2.5 sm:p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300 flex flex-col justify-between min-h-[72px]';
       }
     }
   });
@@ -904,8 +904,8 @@ function updateMgAllViews() {
   const btnAmp10 = document.getElementById('mg-ampoule-10');
   if (btnAmp50 && btnAmp10) {
     if (isAmp50) {
-      btnAmp50.className = 'px-3 py-2 rounded-lg border text-xs font-bold transition-all text-center cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-700 dark:text-teal-300';
-      btnAmp10.className = 'px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold transition-all text-center cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800';
+      btnAmp50.className = 'p-2.5 sm:px-3 sm:py-2 rounded-lg border text-xs font-bold transition-all text-center cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-700 dark:text-teal-300';
+      btnAmp10.className = 'p-2.5 sm:px-3 sm:py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold transition-all text-center cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800';
     } else {
       btnAmp10.className = 'px-3 py-2 rounded-lg border text-xs font-bold transition-all text-center cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-700 dark:text-teal-300';
       btnAmp50.className = 'px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold transition-all text-center cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800';
@@ -1076,14 +1076,14 @@ function updateMgBicDisplay() {
       led.className = 'w-3 h-3 rounded-full pump-led-running';
       statusLabel.className = 'font-mono font-bold text-emerald-400';
       statusLabel.innerText = 'INFUNDINDO • RUNNING';
-      toggleBtn.innerHTML = '<i class="fa-solid fa-pause"></i> Pausar';
-      toggleBtn.className = 'pump-btn px-2.5 py-1 rounded text-[11px] font-bold text-amber-400 hover:text-amber-300 ml-1 cursor-pointer';
+      toggleBtn.innerHTML = '<i class="fa-solid fa-pause"></i> <span>Pausar</span>';
+      toggleBtn.className = 'pump-btn px-3 py-1.5 rounded text-[11px] font-bold text-amber-400 hover:text-amber-300 ml-1 cursor-pointer whitespace-nowrap flex items-center gap-1.5';
     } else {
       led.className = 'w-3 h-3 rounded-full pump-led-paused';
       statusLabel.className = 'font-mono font-bold text-amber-400';
       statusLabel.innerText = 'PAUSADO • STANDBY';
-      toggleBtn.innerHTML = '<i class="fa-solid fa-play"></i> Iniciar';
-      toggleBtn.className = 'pump-btn px-2.5 py-1 rounded text-[11px] font-bold text-emerald-400 hover:text-emerald-300 ml-1 cursor-pointer';
+      toggleBtn.innerHTML = '<i class="fa-solid fa-play"></i> <span>Iniciar</span>';
+      toggleBtn.className = 'pump-btn px-3 py-1.5 rounded text-[11px] font-bold text-emerald-400 hover:text-emerald-300 ml-1 cursor-pointer whitespace-nowrap flex items-center gap-1.5';
     }
   }
 }

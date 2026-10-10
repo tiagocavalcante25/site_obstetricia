@@ -680,18 +680,48 @@
               </span>
             </div>
 
-            <!-- Botões de Seleção Rápida de Classes -->
-            <div class="flex flex-wrap gap-1.5">
-              <button type="button" onclick="selectPriscillaWhite('A1')" id="pw-btn-A1" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-teal-600 text-white border-teal-600 shadow-md cursor-pointer">Classe A1 (DMG Dietético)</button>
-              <button type="button" onclick="selectPriscillaWhite('A2')" id="pw-btn-A2" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe A2 (DMG Insulina)</button>
-              <button type="button" onclick="selectPriscillaWhite('B')" id="pw-btn-B" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe B (Início ≥20a)</button>
-              <button type="button" onclick="selectPriscillaWhite('C')" id="pw-btn-C" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe C (Início 10-19a)</button>
-              <button type="button" onclick="selectPriscillaWhite('D')" id="pw-btn-D" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe D (Retinopatia Simples)</button>
-              <button type="button" onclick="selectPriscillaWhite('E')" id="pw-btn-E" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe E (Calcificação Pélvica)</button>
-              <button type="button" onclick="selectPriscillaWhite('F')" id="pw-btn-F" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe F (Nefropatia)</button>
-              <button type="button" onclick="selectPriscillaWhite('R')" id="pw-btn-R" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe R (Retinopatia Prolif.)</button>
-              <button type="button" onclick="selectPriscillaWhite('H')" id="pw-btn-H" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe H (Cardiopatia Coronária)</button>
-              <button type="button" onclick="selectPriscillaWhite('T')" id="pw-btn-T" class="pw-btn px-3 py-2 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer">Classe T (Transplante Renal)</button>
+            <!-- Botões de Seleção Rápida de Classes (Grid Responsivo Fluido 2 a 5 colunas) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+              <button type="button" onclick="selectPriscillaWhite('A1')" id="pw-btn-A1" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-teal-600 text-white border-teal-600 shadow-md cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe A1</span>
+                <span class="text-[10px] font-normal opacity-90">DMG Dietético</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('A2')" id="pw-btn-A2" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe A2</span>
+                <span class="text-[10px] font-normal opacity-90">DMG Insulina</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('B')" id="pw-btn-B" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe B</span>
+                <span class="text-[10px] font-normal opacity-90">Início ≥20a</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('C')" id="pw-btn-C" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe C</span>
+                <span class="text-[10px] font-normal opacity-90">Início 10–19a</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('D')" id="pw-btn-D" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe D</span>
+                <span class="text-[10px] font-normal opacity-90">Retinopatia Simp.</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('E')" id="pw-btn-E" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe E</span>
+                <span class="text-[10px] font-normal opacity-90">Calcif. Pélvica</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('F')" id="pw-btn-F" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe F</span>
+                <span class="text-[10px] font-normal opacity-90">Nefropatia</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('R')" id="pw-btn-R" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe R</span>
+                <span class="text-[10px] font-normal opacity-90">Retinop. Prolif.</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('H')" id="pw-btn-H" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe H</span>
+                <span class="text-[10px] font-normal opacity-90">Cardiopatia</span>
+              </button>
+              <button type="button" onclick="selectPriscillaWhite('T')" id="pw-btn-T" class="pw-btn p-2.5 rounded-xl text-xs font-bold border transition-all bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-teal-500 cursor-pointer flex flex-col items-center justify-center text-center">
+                <span>Classe T</span>
+                <span class="text-[10px] font-normal opacity-90">Transpl. Renal</span>
+              </button>
             </div>
 
             <!-- Card Detalhado da Classe Selecionada -->
@@ -767,11 +797,11 @@
                 </h4>
                 <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Selecione o fluxo do seu serviço de saúde para consultar o algoritmo de rastreamento:</p>
               </div>
-              <div class="flex items-center gap-2">
-                <button type="button" onclick="switchGdmStrategy('total')" id="btn-strategy-total" class="px-4 py-2 rounded-xl text-xs font-bold bg-teal-600 text-white shadow-md cursor-pointer">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full sm:w-auto">
+                <button type="button" onclick="switchGdmStrategy('total')" id="btn-strategy-total" class="w-full text-center py-2.5 px-3 rounded-xl text-xs font-bold bg-teal-600 text-white shadow-md cursor-pointer transition-all">
                   Viabilidade Total (100% Detecção)
                 </button>
-                <button type="button" onclick="switchGdmStrategy('partial')" id="btn-strategy-partial" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 cursor-pointer">
+                <button type="button" onclick="switchGdmStrategy('partial')" id="btn-strategy-partial" class="w-full text-center py-2.5 px-3 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 cursor-pointer transition-all">
                   Viabilidade Parcial (86% Detecção)
                 </button>
               </div>
@@ -1025,9 +1055,9 @@
               <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
                 Informe o IMC Pré-Gestacional da Paciente (kg/m²):
               </label>
-              <div class="flex items-center gap-3">
-                <input type="number" id="gdm-weight-imc" step="0.1" placeholder="Ex: 27.4" class="max-w-[200px] px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm font-mono font-bold">
-                <button type="button" onclick="calcGestationalWeightGain()" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all shadow-md cursor-pointer">
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
+                <input type="number" id="gdm-weight-imc" step="0.1" placeholder="Ex: 27.4" class="w-full sm:max-w-[200px] px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm font-mono font-bold">
+                <button type="button" onclick="calcGestationalWeightGain()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all shadow-md cursor-pointer text-center whitespace-normal sm:whitespace-nowrap">
                   Calcular Metas de Ganho de Peso
                 </button>
               </div>
@@ -1105,9 +1135,9 @@
                 A insulina não atravessa a barreira placentária e é a escolha prioritária em todas as diretrizes (FEBRASGO / SBD).
               </p>
               
-              <div class="flex items-center gap-3 pt-1">
-                <input type="number" id="gdm-insulin-weight" placeholder="Peso atual (kg)" class="max-w-[180px] px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm font-mono font-bold">
-                <button type="button" onclick="calcInsulinDose()" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all shadow-md cursor-pointer">
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 pt-1">
+                <input type="number" id="gdm-insulin-weight" placeholder="Peso atual (kg)" class="w-full sm:max-w-[180px] px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-sm font-mono font-bold">
+                <button type="button" onclick="calcInsulinDose()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all shadow-md cursor-pointer text-center whitespace-normal sm:whitespace-nowrap">
                   Calcular Esquema Trifásico
                 </button>
               </div>
@@ -1710,7 +1740,7 @@
                   Diretriz RBEHG 2025 / FEBRASGO (Quadro 6): <strong>1 fator de alto risco</strong> OU <strong>≥ 2 fatores moderados</strong> indicam profilaxia!
                 </p>
               </div>
-              <button type="button" onclick="calcPreeclampsiaRisk()" class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all cursor-pointer">
+              <button type="button" onclick="calcPreeclampsiaRisk()" class="w-full sm:w-auto px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all cursor-pointer text-center whitespace-nowrap">
                 Calcular Indicação
               </button>
             </div>
@@ -2020,8 +2050,8 @@
                   Presets clínicos oficiais (FEBRASGO 2024 / ACOG / OMS), diluições exatas em ampolas e mL, controle digital de Bomba de Infusão Contínua (BIC), cronograma de 24 horas e segurança da enfermagem.
                 </p>
               </div>
-              <div class="flex items-center gap-2">
-                <button type="button" onclick="copyMgPrescription()" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold text-xs shadow-md shadow-teal-500/20 hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer">
+              <div class="w-full sm:w-auto flex items-center justify-end">
+                <button type="button" onclick="copyMgPrescription()" class="w-full sm:w-auto justify-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold text-xs shadow-md shadow-teal-500/20 hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer">
                   <i class="fa-solid fa-copy"></i>
                   <span id="mg-copy-btn-label">Copiar Prescrição Completa</span>
                 </button>
@@ -2033,36 +2063,48 @@
               <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
                 1. Selecione o Protocolo Clínico Indicado (Presets Farmacológicos Oficiais):
               </label>
-              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
-                <button type="button" onclick="selectMgProtocol('zuspan1')" id="mg-tab-zuspan1" class="protocol-tab p-3 rounded-xl border text-left transition-all cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-800 dark:text-teal-200 shadow-sm">
-                  <span class="block text-xs font-bold">Zuspan 1 g/h</span>
-                  <span class="block text-[10px] text-slate-500 dark:text-slate-400">Padrão FEBRASGO IV</span>
-                  <span class="inline-block mt-1 text-[9px] font-semibold px-1.5 py-0.5 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300">Padrão Ouro</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-2.5">
+                <button type="button" onclick="selectMgProtocol('zuspan1')" id="mg-tab-zuspan1" class="protocol-tab p-2.5 sm:p-3 rounded-xl border text-left transition-all cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-800 dark:text-teal-200 shadow-sm flex flex-col justify-between min-h-[72px]">
+                  <div>
+                    <span class="block text-xs font-bold leading-snug">Zuspan 1 g/h</span>
+                    <span class="block text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Padrão FEBRASGO IV</span>
+                  </div>
+                  <span class="inline-block mt-1.5 text-[9px] font-bold px-1.5 py-0.5 rounded bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 self-start">Padrão Ouro</span>
                 </button>
-                <button type="button" onclick="selectMgProtocol('zuspan2')" id="mg-tab-zuspan2" class="protocol-tab p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300">
-                  <span class="block text-xs font-bold">Zuspan 2 g/h</span>
-                  <span class="block text-[10px] text-slate-500 dark:text-slate-400">ACOG / Obesas IV</span>
-                  <span class="inline-block mt-1 text-[9px] font-semibold px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">Reforçado</span>
+                <button type="button" onclick="selectMgProtocol('zuspan2')" id="mg-tab-zuspan2" class="protocol-tab p-2.5 sm:p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300 flex flex-col justify-between min-h-[72px]">
+                  <div>
+                    <span class="block text-xs font-bold leading-snug">Zuspan 2 g/h</span>
+                    <span class="block text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">ACOG / Obesas IV</span>
+                  </div>
+                  <span class="inline-block mt-1.5 text-[9px] font-bold px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 self-start">Reforçado</span>
                 </button>
-                <button type="button" onclick="selectMgProtocol('sibai')" id="mg-tab-sibai" class="protocol-tab p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300">
-                  <span class="block text-xs font-bold">Sibai (6g + 2g/h)</span>
-                  <span class="block text-[10px] text-slate-500 dark:text-slate-400">Ataque Expandido</span>
-                  <span class="inline-block mt-1 text-[9px] font-semibold px-1.5 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">Hiperagudo</span>
+                <button type="button" onclick="selectMgProtocol('sibai')" id="mg-tab-sibai" class="protocol-tab p-2.5 sm:p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300 flex flex-col justify-between min-h-[72px]">
+                  <div>
+                    <span class="block text-xs font-bold leading-snug">Sibai (6g + 2g/h)</span>
+                    <span class="block text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Ataque Expandido</span>
+                  </div>
+                  <span class="inline-block mt-1.5 text-[9px] font-bold px-1.5 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 self-start">Hiperagudo</span>
                 </button>
-                <button type="button" onclick="selectMgProtocol('pritchard')" id="mg-tab-pritchard" class="protocol-tab p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300">
-                  <span class="block text-xs font-bold">Pritchard (IM)</span>
-                  <span class="block text-[10px] text-slate-500 dark:text-slate-400">Misto IV+IM</span>
-                  <span class="inline-block mt-1 text-[9px] font-semibold px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">Sem Bomba</span>
+                <button type="button" onclick="selectMgProtocol('pritchard')" id="mg-tab-pritchard" class="protocol-tab p-2.5 sm:p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300 flex flex-col justify-between min-h-[72px]">
+                  <div>
+                    <span class="block text-xs font-bold leading-snug">Pritchard (IM)</span>
+                    <span class="block text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Misto IV+IM</span>
+                  </div>
+                  <span class="inline-block mt-1.5 text-[9px] font-bold px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 self-start">Sem Bomba</span>
                 </button>
-                <button type="button" onclick="selectMgProtocol('neuro')" id="mg-tab-neuro" class="protocol-tab p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300">
-                  <span class="block text-xs font-bold">Neuroproteção</span>
-                  <span class="block text-[10px] text-slate-500 dark:text-slate-400">< 32 sem Fetal</span>
-                  <span class="inline-block mt-1 text-[9px] font-semibold px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">Prematuro</span>
+                <button type="button" onclick="selectMgProtocol('neuro')" id="mg-tab-neuro" class="protocol-tab p-2.5 sm:p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300 flex flex-col justify-between min-h-[72px]">
+                  <div>
+                    <span class="block text-xs font-bold leading-snug">Neuroproteção</span>
+                    <span class="block text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">< 32 sem Fetal</span>
+                  </div>
+                  <span class="inline-block mt-1.5 text-[9px] font-bold px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 self-start">Prematuro</span>
                 </button>
-                <button type="button" onclick="selectMgProtocol('recorrencia')" id="mg-tab-recorrencia" class="protocol-tab p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300">
-                  <span class="block text-xs font-bold">Crise Recorrente</span>
-                  <span class="block text-[10px] text-slate-500 dark:text-slate-400">Bolus de Resgate 2g</span>
-                  <span class="inline-block mt-1 text-[9px] font-semibold px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300">Emergência</span>
+                <button type="button" onclick="selectMgProtocol('recorrencia')" id="mg-tab-recorrencia" class="protocol-tab p-2.5 sm:p-3 rounded-xl border border-slate-200 dark:border-slate-800 text-left transition-all cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-700 dark:text-slate-300 flex flex-col justify-between min-h-[72px]">
+                  <div>
+                    <span class="block text-xs font-bold leading-snug">Crise Recorrente</span>
+                    <span class="block text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Bolus Resgate 2g</span>
+                  </div>
+                  <span class="inline-block mt-1.5 text-[9px] font-bold px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 self-start">Emergência</span>
                 </button>
               </div>
             </div>
@@ -2074,12 +2116,12 @@
                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
                   <i class="fa-solid fa-syringe text-teal-600"></i> Apresentação da Ampola de MgSO₄:
                 </label>
-                <div class="grid grid-cols-2 gap-2">
-                  <button type="button" onclick="setMgAmpoule('50')" id="mg-ampoule-50" class="px-3 py-2 rounded-lg border text-xs font-bold transition-all text-center cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-700 dark:text-teal-300">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <button type="button" onclick="setMgAmpoule('50')" id="mg-ampoule-50" class="p-2.5 sm:px-3 sm:py-2 rounded-lg border text-xs font-bold transition-all text-center cursor-pointer bg-teal-500/10 dark:bg-teal-950/40 border-teal-500 text-teal-700 dark:text-teal-300">
                     <span>50% (10 mL = 5g)</span>
                     <span class="block text-[10px] font-normal text-slate-500">Padrão Brasil (0,5g/mL)</span>
                   </button>
-                  <button type="button" onclick="setMgAmpoule('10')" id="mg-ampoule-10" class="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold transition-all text-center cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <button type="button" onclick="setMgAmpoule('10')" id="mg-ampoule-10" class="p-2.5 sm:px-3 sm:py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold transition-all text-center cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
                     <span>10% (10 mL = 1g)</span>
                     <span class="block text-[10px] font-normal text-slate-500">UTI / Hospitalar (0,1g/mL)</span>
                   </button>
@@ -2225,7 +2267,7 @@
                       </div>
 
                       <!-- Secondary parameters grid -->
-                      <div class="grid grid-cols-3 gap-2 mt-3 pt-2.5 border-t border-teal-900/60 text-[10px] font-mono">
+                      <div class="grid grid-cols-1 xs:grid-cols-3 gap-2 mt-3 pt-2.5 border-t border-teal-900/60 text-[10px] sm:text-xs font-mono">
                         <div>
                           <span class="text-teal-500 block">VTBI (Frasco):</span>
                           <span id="mg-bic-vtbi-val" class="font-bold text-white">500 mL</span>
@@ -2234,7 +2276,7 @@
                           <span class="text-teal-500 block">Concentração:</span>
                           <span id="mg-bic-conc-val" class="font-bold text-white">20 mg/mL</span>
                         </div>
-                        <div class="text-right">
+                        <div class="xs:text-right">
                           <span class="text-teal-500 block">Duração Bolsa:</span>
                           <span id="mg-bic-duration-val" class="font-bold text-emerald-400">~10h 00m</span>
                         </div>
@@ -2246,20 +2288,24 @@
                       </div>
                     </div>
 
-                    <!-- BIC Controls & Quick Presets -->
-                    <div class="flex flex-wrap items-center justify-between gap-2">
-                      <div class="flex items-center gap-1.5">
-                        <span class="text-[10px] font-bold text-slate-400 uppercase font-mono mr-1">Presets:</span>
-                        <button type="button" onclick="setMgBicRatePreset(25)" class="pump-btn px-2 py-1 rounded text-[11px] font-mono font-bold text-slate-200 cursor-pointer">25 mL/h</button>
-                        <button type="button" onclick="setMgBicRatePreset(50)" class="pump-btn px-2 py-1 rounded text-[11px] font-mono font-bold text-emerald-400 cursor-pointer">50 mL/h</button>
-                        <button type="button" onclick="setMgBicRatePreset(75)" class="pump-btn px-2 py-1 rounded text-[11px] font-mono font-bold text-slate-200 cursor-pointer">75 mL/h</button>
-                        <button type="button" onclick="setMgBicRatePreset(100)" class="pump-btn px-2 py-1 rounded text-[11px] font-mono font-bold text-cyan-300 cursor-pointer">100 mL/h</button>
+                    <!-- BIC Controls & Quick Presets (100% Responsivo: Nunca achata em colunas verticais) -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pt-1">
+                      <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase font-mono shrink-0">Presets:</span>
+                        <div class="grid grid-cols-4 gap-1 sm:gap-1.5 flex-1 min-w-[200px]">
+                          <button type="button" onclick="setMgBicRatePreset(25)" class="pump-btn px-2 py-1.5 rounded text-[11px] font-mono font-bold text-slate-200 cursor-pointer whitespace-nowrap text-center">25 mL/h</button>
+                          <button type="button" onclick="setMgBicRatePreset(50)" class="pump-btn px-2 py-1.5 rounded text-[11px] font-mono font-bold text-emerald-400 cursor-pointer whitespace-nowrap text-center">50 mL/h</button>
+                          <button type="button" onclick="setMgBicRatePreset(75)" class="pump-btn px-2 py-1.5 rounded text-[11px] font-mono font-bold text-slate-200 cursor-pointer whitespace-nowrap text-center">75 mL/h</button>
+                          <button type="button" onclick="setMgBicRatePreset(100)" class="pump-btn px-2 py-1.5 rounded text-[11px] font-mono font-bold text-cyan-300 cursor-pointer whitespace-nowrap text-center">100 mL/h</button>
+                        </div>
                       </div>
-                      <div class="flex items-center gap-1">
-                        <button type="button" onclick="adjustMgBicRate(-5)" class="pump-btn px-2 py-1 rounded text-xs text-slate-300 cursor-pointer" title="Diminuir 5 mL/h"><i class="fa-solid fa-minus"></i></button>
-                        <button type="button" onclick="adjustMgBicRate(5)" class="pump-btn px-2 py-1 rounded text-xs text-slate-300 cursor-pointer" title="Aumentar 5 mL/h"><i class="fa-solid fa-plus"></i></button>
-                        <button type="button" onclick="toggleMgBicRun()" id="mg-bic-toggle-btn" class="pump-btn px-2.5 py-1 rounded text-[11px] font-bold text-amber-400 hover:text-amber-300 ml-1 cursor-pointer">
-                          <i class="fa-solid fa-pause"></i> Pausar
+                      <div class="flex items-center justify-between sm:justify-end gap-1.5 shrink-0 pt-1 sm:pt-0 border-t border-slate-800/80 sm:border-0">
+                        <div class="flex items-center gap-1">
+                          <button type="button" onclick="adjustMgBicRate(-5)" class="pump-btn px-2.5 py-1.5 rounded text-xs font-bold text-slate-300 cursor-pointer flex items-center gap-1" title="Diminuir 5 mL/h"><i class="fa-solid fa-minus"></i> <span class="text-[10px]">5</span></button>
+                          <button type="button" onclick="adjustMgBicRate(5)" class="pump-btn px-2.5 py-1.5 rounded text-xs font-bold text-slate-300 cursor-pointer flex items-center gap-1" title="Aumentar 5 mL/h"><i class="fa-solid fa-plus"></i> <span class="text-[10px]">5</span></button>
+                        </div>
+                        <button type="button" onclick="toggleMgBicRun()" id="mg-bic-toggle-btn" class="pump-btn px-3 py-1.5 rounded text-[11px] font-bold text-amber-400 hover:text-amber-300 cursor-pointer whitespace-nowrap flex items-center gap-1.5">
+                          <i class="fa-solid fa-pause"></i> <span>Pausar</span>
                         </button>
                       </div>
                     </div>
@@ -2390,15 +2436,15 @@
 
             <!-- 6. PRESCRIÇÃO MÉDICA HOSPITALAR COMPLETA (ÁREA DE TRANSFERÊNCIA) -->
             <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700">
-              <div class="flex items-center justify-between mb-2">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                 <span class="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5 uppercase tracking-wider">
                   <i class="fa-solid fa-file-medical text-teal-600"></i> Texto Formatado para Prescrição Médica (PEP / MV / Tasy):
                 </span>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center justify-between sm:justify-end gap-2">
                   <span id="mg-copied-feedback" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hidden animate-fade-in">
                     <i class="fa-solid fa-check"></i> Copiado com sucesso!
                   </span>
-                  <button type="button" onclick="copyMgPrescription()" class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer">
+                  <button type="button" onclick="copyMgPrescription()" class="w-full sm:w-auto justify-center px-3.5 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
                     <i class="fa-solid fa-clipboard"></i> Copiar Texto
                   </button>
                 </div>
@@ -2525,7 +2571,7 @@
                   <option value="pe_severe_stable">Pré-Eclâmpsia Grave Estabilizada (com corticoterapia prévia)</option>
                   <option value="pe_emergency">Eclâmpsia, Síndrome HELLP ou Sinais de Refratariedade</option>
                 </select>
-                <button type="button" onclick="calcHypertensionDeliveryTiming()" class="px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all cursor-pointer">
+                <button type="button" onclick="calcHypertensionDeliveryTiming()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition-all cursor-pointer text-center whitespace-nowrap">
                   Ver Conduta
                 </button>
               </div>
@@ -3064,14 +3110,14 @@
         </div>
 
         <!-- CONTROLS -->
-        <div class="flex items-center justify-center gap-4 mt-6">
-          <button onclick="prevFlashcard()" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-purple-500 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all shadow-sm">
+        <div class="flex flex-wrap sm:flex-nowrap items-center justify-center gap-2 sm:gap-4 mt-6">
+          <button onclick="prevFlashcard()" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-purple-500 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all shadow-sm whitespace-nowrap">
             <i class="fa-solid fa-chevron-left mr-1"></i> Anterior
           </button>
-          <button onclick="flipFlashcard()" class="px-6 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition-all shadow-md shadow-purple-500/20">
+          <button onclick="flipFlashcard()" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition-all shadow-md shadow-purple-500/20 whitespace-nowrap">
             <i class="fa-solid fa-arrows-rotate mr-1"></i> Virar Cartão
           </button>
-          <button onclick="nextFlashcard()" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-purple-500 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all shadow-sm">
+          <button onclick="nextFlashcard()" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-purple-500 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all shadow-sm whitespace-nowrap">
             Próximo <i class="fa-solid fa-chevron-right ml-1"></i>
           </button>
         </div>
